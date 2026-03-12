@@ -48,3 +48,8 @@ jobs:
         run: |
           cd paiement-service
           mvn -B clean install
+
+      - name: Build Docker image product-service
+        run: |
+            cd product-service
+            docker build -t product-service .
