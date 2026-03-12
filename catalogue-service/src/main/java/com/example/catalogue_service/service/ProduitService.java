@@ -20,7 +20,7 @@ public class ProduitService {
 
     private static final Logger log = LoggerFactory.getLogger(ProduitService.class);
 
-    private final ProduitRepository produitRepository;
+    private final ProduitRepository produitRepository //point virgule enlevé
     private final ProduitMapper produitMapper;
 
     public ProduitService(ProduitRepository produitRepository, ProduitMapper produitMapper) {
