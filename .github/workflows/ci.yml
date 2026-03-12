@@ -51,5 +51,5 @@ jobs:
 
       - name: Build Docker image product-service
         run: |
-            cd product-service
-            docker build -t product-service .
+            cd catalogue-service
+            docker build -t catalogue-service .
