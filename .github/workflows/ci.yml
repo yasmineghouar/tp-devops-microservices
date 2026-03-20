@@ -65,7 +65,14 @@ jobs:
       - name: Set up Helm
         uses: azure/setup-helm@v3
 
-      # 6. Deploy each microservice using Helm
+      # 6. Create Kubernetes cluster for CI deployment tests
+      - name: Create Kind Cluster
+        uses: helm/kind-action@v1.10.0
+
+      - name: Verify Kubernetes Connectivity
+        run: kubectl cluster-info
+
+      # 7. Deploy each microservice using Helm
       - name: Deploy Config Service
         run: helm upgrade --install config-service ./charts/config-service
 
